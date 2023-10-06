@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numThrows;
+    printf("주사위를 몇 번 던지시겠습니까? ");
+    scanf("%d", &numThrows);
+
+    // 랜덤 시드 설정
+    srand(time(NULL));
+
+    printf("주사위 던지기 결과:\n");
+
+    for (int i = 0; i < numThrows; i++) {
+        // 1에서 6까지의 랜덤 숫자 생성
+        int roll = rand() % 6 + 1;
+        printf("%d ", roll);
+    }
+
+    printf("\n");
+
+    return 0;
+}
